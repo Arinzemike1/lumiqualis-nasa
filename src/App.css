@@ -3,7 +3,7 @@ body {
   font-family: 'PT Sans Narrow';
 }
 .movies {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: space-between;
   width: 22.66rem;
@@ -27,12 +27,12 @@ body {
   transform: scale(1.02);
 }
 .main-content {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: space-between;
 }
 .wrapper {
-  display: flex;
+  display: flex !important;
   justify-content: space-around;
   flex-wrap: wrap;
 }

@@ -56,7 +56,7 @@ const MovieListing = () => {
         <>
             <h4 className='yellow-color text-center mt-2 fw-bold'>NASA: <span className='blue-shade'>Picture of the Day</span></h4>
             <h4 className='blue-shade text-center fw-bold'>{`${week}, ${month}, ${day}, ${year}`}</h4>
-            <img src={image.hdurl} className="img-fluid" alt="Nasa background" />
+            <img src={image.hdurl} className="img-fluid" alt="" />
 
             {
                 loader ? <Loader /> :  

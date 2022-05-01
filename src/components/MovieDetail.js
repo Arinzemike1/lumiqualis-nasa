@@ -4,11 +4,12 @@ import axios from 'axios';
 import Loader from './Loader';
 import '../../src/App.css'
 
+const IMDB_API_KEY = process.env.REACT_APP_IMDB_API_KEY;
+
 const MovieDetail = () => {
     const [movie, setMovie] = useState([]);
     const [loader, setLoader] = useState(false);
 
-    const IMDB_API_KEY = process.env.REACT_APP_IMDB_API_KEY;
     const { movieId } = useParams();
 
     const fetchEachMovie = () => {

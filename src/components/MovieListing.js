@@ -3,9 +3,10 @@ import axios from 'axios';
 import MovieWrapper from './MovieWrapper';
 import Loader from './Loader';
 
+const NASA_API_KEY = process.env.REACT_APP_NASA_API_KEY;
+const IMDB_API_KEY = process.env.REACT_APP_IMDB_API_KEY;
+
 const MovieListing = () => {
-    const NASA_API_KEY = process.env.REACT_APP_NASA_API_KEY;
-    const IMDB_API_KEY = process.env.REACT_APP_IMDB_API_KEY;
 
     const [image, setImage] = useState('');
     const [movies, setMovies] = useState([]);
@@ -43,7 +44,10 @@ const MovieListing = () => {
 
     useEffect(() => {
         fetchNasa();
-        fetchMovies();
+        
+        setTimeout(() => {
+            fetchMovies();
+        }, 1000);
 
         //eslint-disable-next-line
     }, [])
@@ -52,7 +56,7 @@ const MovieListing = () => {
         <>
             <h4 className='yellow-color text-center mt-2 fw-bold'>NASA: <span className='blue-shade'>Picture of the Day</span></h4>
             <h4 className='blue-shade text-center fw-bold'>{`${week}, ${month}, ${day}, ${year}`}</h4>
-            <img src={image.hdurl} alt="" />
+            <img src={image.hdurl} className="img-fluid" alt="Nasa background image" />
 
             {
                 loader ? <Loader /> :  

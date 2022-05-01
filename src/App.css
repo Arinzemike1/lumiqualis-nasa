@@ -15,11 +15,11 @@ body {
   border: 1px solid rgb(255, 255, 255);
   border-radius: 4px;
 }
-a{
+.movie-lists{
   text-decoration: none;
   color: #000;
 }
-a:hover {
+.movie-lists:hover {
   text-decoration: underline rgb(255, 183, 3);
   color: #000;
 }
@@ -52,4 +52,16 @@ a:hover {
 }
 .extra-margin {
   margin-top: 70px;
+}
+.image-container {
+  border: 1px solid #dbd3d3;
+  padding: 40px 20px;
+}
+.image-size {
+  height: 500px;
+  width: 400px;
+}
+.movie-content p{
+  font-size: 20px;
+  letter-spacing: 1px;
 }

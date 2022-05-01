@@ -9,9 +9,9 @@ const MovieWrapper = ({ movies }) => {
             <div className='movies' key={id}>
                 <Link to={`movie/${id}`} className="movie-lists">
                     <div>
-                        <img src={!poster_path ? "./gallery.png" : `https://image.tmdb.org/t/p/original/${poster_path}`} className="poster-path" alt={original_title} />
+                        <img src={!poster_path ? "./gallery.png" : `https://image.tmdb.org/t/p/original/${poster_path}`} className={`poster-path ${!poster_path && "extra-margin"}`} alt={original_title} />
                     </div>
-                    <h1 className={`original-title yellow-color text-center ${!poster_path && "extra-margin"}`}>{original_title}</h1>
+                    <h1 className="original-title yellow-color text-center">{original_title}</h1>
 
                     <h4 className='fw-bold'>Description:</h4>
                     <p>{overview}</p>

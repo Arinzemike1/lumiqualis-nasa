@@ -48,12 +48,12 @@ body {
   margin: 0px 0px 20px;
 }
 .poster-path {
-  min-height: 400px;
+  min-height: 250px;
   width: 100%;
   margin: 0px 0px 20px;
 }
 .extra-margin {
-  margin-top: 70px;
+  margin-top: 33px;
 }
 .image-container {
   border: 1px solid #dbd3d3;

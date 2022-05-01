@@ -64,7 +64,7 @@ const MovieListing = () => {
                     <MovieWrapper movies={movies} />
                 </div>
             }
-           
+
         </>
     )
 }

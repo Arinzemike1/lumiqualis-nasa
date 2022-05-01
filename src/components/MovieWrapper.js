@@ -6,8 +6,8 @@ const MovieWrapper = ({ movies }) => {
     const renderMovies = movies.map((movie) => {
         const { id, poster_path, original_title, overview, popularity, release_date } = movie;
         return (
-            <div className='movies'>
-                <Link to={`movie/${id}`} key={id} className="movie-lists">
+            <div className='movies' key={id}>
+                <Link to={`movie/${id}`} className="movie-lists">
                     <div>
                         <img src={!poster_path ? "./gallery.png" : `https://image.tmdb.org/t/p/original/${poster_path}`} className="poster-path" alt={original_title} />
                     </div>

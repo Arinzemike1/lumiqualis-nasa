@@ -38,15 +38,11 @@ const MovieListing = () => {
 
     return (
         <>
-            <div className='app-container'>
-                <img src={image.hdurl} alt="" />
-            </div>
-
-            <div>
+            <img src={image.hdurl} alt="" />
+            <div className='full-block'>
                 <MovieWrapper movies={movies} />
             </div>
         </>
-
     )
 }
 

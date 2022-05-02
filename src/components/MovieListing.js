@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import MovieWrapper from './MovieWrapper';
 import Loader from './Loader';
-import { Helmet } from "react-helmet";
 
 const NASA_API_KEY = process.env.REACT_APP_NASA_API_KEY;
 const IMDB_API_KEY = process.env.REACT_APP_IMDB_API_KEY;
@@ -44,6 +43,7 @@ const MovieListing = () => {
     }
 
     useEffect(() => {
+        document.title =  "NASA & IMDB Challenge";
         fetchNasa();
         
         setTimeout(() => {
@@ -55,10 +55,6 @@ const MovieListing = () => {
 
     return (
         <>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>NASA & IMDB Challenge</title>
-            </Helmet>
             <h4 className='yellow-color text-center mt-2 fw-bold'>NASA: <span className='blue-shade'>Picture of the Day</span></h4>
             <h4 className='blue-shade text-center fw-bold'>{`${week}, ${month}, ${day}, ${year}`}</h4>
             <img src={image.hdurl} className="img-fluid" alt="" />

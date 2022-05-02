@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Loader from './Loader';
+import { Helmet } from "react-helmet";
 import '../../src/App.css'
 
 const IMDB_API_KEY = process.env.REACT_APP_IMDB_API_KEY;
@@ -36,6 +37,11 @@ const MovieDetail = () => {
 
     return (
         <div className="container mt-5 pt-5">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{window.location.href}</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             {
                 loader ? <Loader /> :
 
